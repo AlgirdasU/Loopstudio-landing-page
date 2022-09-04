@@ -1,0 +1,31 @@
+:root {
+  --white: hsl(0, 0%, 100%);
+  --black: hsl(0, 0%, 0%);
+  --dark-gray: hsl(0, 0%, 41%);
+  --body-font-sz: 1.5rem;
+  --alata-font: "Alata", sans-serif;
+  --josefin-sans-font: "Josefin Sans", sans-serif;
+  --alata-font-weight: 400;
+  --josefine-font-weight: 300; }
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; }
+
+.container {
+  background-color: #e0c7a5; }
+
+.main-nav__link {
+  font-size: 4rem; }
+
+.attribution {
+  font-size: 11px;
+  text-align: center; }
+
+.attribution a {
+  color: #3e52a3; }

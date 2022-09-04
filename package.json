@@ -1,0 +1,15 @@
+{
+  "name": "05-loopstudios-landing-page-main",
+  "version": "1.0.0",
+  "description": "Design preview for the Loopstudios landing page coding challenge",
+  "main": "index.js",
+  "scripts": {
+    "watch:sass": "node-sass sass/main.scss css/style.css -w",
+    "compile:sass": "node-sass sass/main.scss css/style.comp.css"
+  },
+  "author": "Algirdas",
+  "license": "ISC",
+  "devDependencies": {
+    "node-sass": "^7.0.1"
+  }
+}
