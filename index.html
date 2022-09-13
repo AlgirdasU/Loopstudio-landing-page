@@ -6,6 +6,10 @@
       name="viewport"
       content="width=device-width, initial-scale=1.0, minimum-scale=1"
     />
+    <meta
+      name="description"
+      content=" Loopstudios has been producing world-class virtual reality projects for some of the best companies around the globe."
+    />
     <!-- displays site properly based on user's device -->
 
     <link
@@ -23,24 +27,54 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="css/style.css" />
+    <script defer src="js/script.js"></script>
 
     <title>Frontend Mentor | Loopstudios landing page</title>
   </head>
   <body class="container">
     <header class="header">
-      <svg class="header__main-logo">
-        <use xlink:href="images/sprite.svg#logo"></use>
-      </svg>
+      <div class="header__nav-box">
+        <svg class="header__main-logo-bg">
+          <use xlink:href="images/sprite.svg#logo"></use>
+        </svg>
+        <nav class="main-nav-hidden">
+          <ul class="main-nav-hidden__list">
+            <li tabindex="0" class="main-nav-hidden__link">About</li>
+            <li tabindex="0" class="main-nav-hidden__link">Careers</li>
+            <li tabindex="0" class="main-nav-hidden__link">Events</li>
+            <li tabindex="0" class="main-nav-hidden__link">Products</li>
+            <li tabindex="0" class="main-nav-hidden__link">Support</li>
+          </ul>
+        </nav>
+      </div>
 
-      <nav class="main-nav">
-        <ul class="main-nav__list">
-          <li class="main-nav__link">About</li>
-          <li class="main-nav__link">Careers</li>
-          <li class="main-nav__link">Events</li>
-          <li class="main-nav__link">Products</li>
-          <li class="main-nav__link">Support</li>
-        </ul>
-      </nav>
+      <div class="header__nav-mobile">
+        <svg class="header__main-logo">
+          <use xlink:href="images/sprite.svg#logo"></use>
+        </svg>
+        <nav class="main-nav">
+          <ul class="main-nav__list">
+            <li class="main-nav__link">About</li>
+            <li class="main-nav__link">Careers</li>
+            <li class="main-nav__link">Events</li>
+            <li class="main-nav__link">Products</li>
+            <li class="main-nav__link">Support</li>
+          </ul>
+        </nav>
+      </div>
+
+      <button class="btn-mobile-nav">
+        <img
+          src="images/icon-hamburger.svg"
+          alt="Icon hamburger"
+          class="btn-mobile-nav__icon btn-mobile-nav__icon--open"
+        />
+        <img
+          src="images/icon-close.svg"
+          alt="Icon close"
+          class="btn-mobile-nav__icon btn-mobile-nav__icon--close"
+        />
+      </button>
     </header>
 
     <main class="main-container">
@@ -64,13 +98,20 @@
       </section>
 
       <section class="about-us">
-        <div class="about__img-box">
-          <img
-            src="images/desktop/image-interactive.jpg"
-            alt="Man wearing virtual reality glasses"
-            class="about__img"
+        <picture class="about__img">
+          <source
+            srcset="images/desktop/image-interactive-min.webp"
+            type="images/desktop/webp"
           />
-        </div>
+          <source
+            srcset="images/desktop/image-interactive.jpg"
+            type="images/desktop/jpg"
+          />
+          <img
+            src="images/desktop/image-interactive-min.webp"
+            alt="Man wearing virtual reality glasses"
+          />
+        </picture>
 
         <div class="about__text-box">
           <h2 class="about__heading-secondary">The leader in interactive VR</h2>
@@ -87,25 +128,30 @@
       <section class="gallery" id="gallery">
         <div class="gallery__heading-box">
           <h2 class="gallery__heading-secondary">Our creations</h2>
-          <a href="#gallery" class="gallery__btn">See all</a>
+          <button class="gallery__btn-top-box">
+            <a href="#gallery" class="gallery__btn">See all</a>
+          </button>
         </div>
 
         <div class="gallery__images-box">
-          <figure class="gallery__item gallery__item--hv-bg gallery__item--1">
+          <figure class="gallery__item">
             <img
               src="images/desktop/image-deep-earth.jpg"
               alt="Deep eart"
-              class="gallery__img gallery__img--desktop"
+              class="gallery__img gallery__img--desktop bg"
             />
             <img
               src="images/mobile/image-deep-earth.jpg"
               alt="Deep eart"
               class="gallery__img gallery__img--mobile"
             />
-            <h3 class="gallery__heading-tertiary">Deep earth</h3>
+            <h3 class="gallery__heading-tertiary">
+              Deep<br />
+              earth
+            </h3>
           </figure>
 
-          <figure class="gallery__item gallery__item--hv-bg gallery__item--2">
+          <figure class="gallery__item">
             <img
               src="images/desktop/image-night-arcade.jpg"
               alt="Night arcade"
@@ -119,7 +165,7 @@
             <h3 class="gallery__heading-tertiary">Night arcade</h3>
           </figure>
 
-          <figure class="gallery__item gallery__item--hv-bg gallery__item--3">
+          <figure class="gallery__item">
             <img
               src="images/desktop/image-soccer-team.jpg"
               alt="Soccer player"
@@ -133,7 +179,7 @@
             <h3 class="gallery__heading-tertiary">Soccer team VR</h3>
           </figure>
 
-          <figure class="gallery__item gallery__item--hv-bg gallery__item--4">
+          <figure class="gallery__item">
             <img
               src="images/desktop/image-grid.jpg"
               alt="Car"
@@ -147,7 +193,7 @@
             <h3 class="gallery__heading-tertiary">The<br />grid</h3>
           </figure>
 
-          <figure class="gallery__item gallery__item--hv-bg gallery__item--5">
+          <figure class="gallery__item">
             <img
               src="images/desktop/image-from-above.jpg"
               alt="From up above"
@@ -161,7 +207,7 @@
             <h3 class="gallery__heading-tertiary">From up above VR</h3>
           </figure>
 
-          <figure class="gallery__item gallery__item--hv-bg gallery__item--6">
+          <figure class="gallery__item">
             <img
               src="images/desktop/image-pocket-borealis.jpg"
               alt="Glow"
@@ -175,7 +221,7 @@
             <h3 class="gallery__heading-tertiary">Pocket borealis</h3>
           </figure>
 
-          <figure class="gallery__item gallery__item--hv-bg gallery__item--7">
+          <figure class="gallery__item">
             <img
               src="images/desktop/image-curiosity.jpg"
               alt="Space voyager"
@@ -189,7 +235,7 @@
             <h3 class="gallery__heading-tertiary">The curiosity</h3>
           </figure>
 
-          <figure class="gallery__item gallery__item--hv-bg gallery__item--8">
+          <figure class="gallery__item">
             <img
               src="images/desktop/image-fisheye.jpg"
               alt="Fisheye"
@@ -202,6 +248,10 @@
             />
             <h3 class="gallery__heading-tertiary">Make it fisheye</h3>
           </figure>
+
+          <button class="gallery__btn-bottom-box">
+            <a href="#gallery" class="gallery__btn-bottom">See all</a>
+          </button>
         </div>
       </section>
     </main>
@@ -215,11 +265,11 @@
 
           <nav class="footer__nav">
             <ul class="footer__list">
-              <li class="footer__link">About</li>
-              <li class="footer__link">Careers</li>
-              <li class="footer__link">Events</li>
-              <li class="footer__link">Products</li>
-              <li class="footer__link">Support</li>
+              <li tabindex="0" class="footer__link">About</li>
+              <li tabindex="0" class="footer__link">Careers</li>
+              <li tabindex="0" class="footer__link">Events</li>
+              <li tabindex="0" class="footer__link">Products</li>
+              <li tabindex="0" class="footer__link">Support</li>
             </ul>
           </nav>
         </div>
@@ -227,31 +277,33 @@
         <div class="footer__social-container">
           <div class="footer__social-box">
             <div class="footer__social-logo">
-              <svg>
+              <svg tabindex="0">
                 <use xlink:href="images/sprite.svg#icon-facebook"></use>
               </svg>
             </div>
 
             <div class="footer__social-logo">
-              <svg>
+              <svg tabindex="0">
                 <use xlink:href="images/sprite.svg#icon-twitter"></use>
               </svg>
             </div>
 
             <div class="footer__social-logo">
-              <svg>
+              <svg tabindex="0">
                 <use xlink:href="images/sprite.svg#icon-pinterest"></use>
               </svg>
             </div>
 
             <div class="footer__social-logo">
-              <svg>
+              <svg tabindex="0">
                 <use xlink:href="images/sprite.svg#icon-instagram"></use>
               </svg>
             </div>
           </div>
 
-          <p class="copyright">© 2021 Loopstudios. All rights reserved.</p>
+          <p class="copyright">
+            © <span class="year">2021</span> Loopstudios. All rights reserved.
+          </p>
         </div>
       </div>
 
