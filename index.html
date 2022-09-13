@@ -37,7 +37,7 @@
         <svg class="header__main-logo-bg">
           <use xlink:href="images/sprite.svg#logo"></use>
         </svg>
-        <nav class="main-nav-hidden">
+        <div class="main-nav-hidden">
           <ul class="main-nav-hidden__list">
             <li tabindex="0" class="main-nav-hidden__link">About</li>
             <li tabindex="0" class="main-nav-hidden__link">Careers</li>
@@ -45,7 +45,7 @@
             <li tabindex="0" class="main-nav-hidden__link">Products</li>
             <li tabindex="0" class="main-nav-hidden__link">Support</li>
           </ul>
-        </nav>
+        </div>
       </div>
 
       <div class="header__nav-mobile">
@@ -99,38 +99,28 @@
 
       <section class="about-us">
         <picture class="about__img">
-          <source
-            srcset="images/desktop/image-interactive-min.webp"
-            type="images/desktop/webp"
-          />
-          <source
-            srcset="images/desktop/image-interactive.jpg"
-            type="images/desktop/jpg"
-          />
           <img
             src="images/desktop/image-interactive-min.webp"
             alt="Man wearing virtual reality glasses"
           />
         </picture>
 
-        <div class="about__text-box">
+        <article class="about__text-box">
           <h2 class="about__heading-secondary">The leader in interactive VR</h2>
-
-          <article class="about__text">
+          <p class="about__text">
             Founded in 2011, Loopstudios has been producing world-class virtual
             reality projects for some of the best companies around the globe.
             Our award-winning creations have transformed businesses through
             digital experiences that bind to their brand.
-          </article>
-        </div>
+          </p>
+        </article>
       </section>
 
       <section class="gallery" id="gallery">
         <div class="gallery__heading-box">
           <h2 class="gallery__heading-secondary">Our creations</h2>
-          <button class="gallery__btn-top-box">
-            <a href="#gallery" class="gallery__btn">See all</a>
-          </button>
+
+          <a href="#gallery" class="gallery__btn">See all</a>
         </div>
 
         <div class="gallery__images-box">
@@ -248,10 +238,9 @@
             />
             <h3 class="gallery__heading-tertiary">Make it fisheye</h3>
           </figure>
-
-          <button class="gallery__btn-bottom-box">
-            <a href="#gallery" class="gallery__btn-bottom">See all</a>
-          </button>
+        </div>
+        <div class="gallery__bottom-box">
+          <a href="#gallery" class="gallery__btn-bottom">See all</a>
         </div>
       </section>
     </main>
@@ -313,7 +302,7 @@
 
           <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
             >Frontend Mentor</a
-          ><spna>. Coded by </spna
+          ><span>. Coded by </span
           ><a href="https://github.com/AlgirdasU/Loopstudio-landing-page"
             >Algirdas</a
           >.

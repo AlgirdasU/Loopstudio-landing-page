@@ -53,7 +53,7 @@ h3 {
 }
 
 @mixin btn-style {
-  justify-content: center;
+  // justify-content: center;
   letter-spacing: 0.5rem;
   border: 0.2rem solid var(--dark-grey-btn);
   padding: 1rem 3.8rem;
@@ -534,11 +534,9 @@ h3 {
     }
   }
 
-  &__btn-top-box {
-    background: none;
-    border: none;
-  }
-  &__btn-bottom-box {
+  &__bottom-box {
+    grid-row: 3 / 4;
+    grid-column: 2 / 10;
     display: flex;
     justify-content: center;
     margin-top: 1.5rem;
@@ -551,7 +549,7 @@ h3 {
     @include btn-style;
 
     @media only screen and (max-width: 36.25em) {
-      display: inline-block;
+      display: flex;
     }
 
     &:hover {
@@ -562,7 +560,7 @@ h3 {
   }
 
   &__images-box {
-    grid-row: 2 / 4;
+    grid-row: 2 / 3;
     grid-column: 2 / 10;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
